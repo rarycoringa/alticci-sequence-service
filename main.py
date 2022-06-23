@@ -1,10 +1,8 @@
 import os
 
-from app import create_app
+from alticci.app import app
 
 if __name__ == "__main__":
-    app = create_app()
-
     debug = os.environ.get("DEBUG", "TRUE")
     debug = True if debug.lower() == "true" else False
 

@@ -1,4 +1,4 @@
-class TestAlticciTermView:
+class TestAlticciSequenceTermView:
     def test_endpoint(self, client):
         term = 8
         value = 5

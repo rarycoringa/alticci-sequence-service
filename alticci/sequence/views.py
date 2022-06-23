@@ -1,12 +1,17 @@
 from flask import Blueprint, jsonify
 
-from app.alticci.controllers import retrieve_alticci_term
+from alticci.cache import cache
+from alticci.sequence.controllers import retrieve_alticci_sequence_term
 
 blueprint = Blueprint("alticci", __name__, url_prefix="/alticci")
 
 @blueprint.route("/<int:term>", methods=["GET"])
-def get_alticci_term(term):
-    value = retrieve_alticci_term(term)
+@cache.cached(timeout=60, query_string=True)
+def get_alticci_sequence_term(term):
+    """
+    """
+
+    value = retrieve_alticci_sequence_term(term)
 
     response = {
         "term": term,

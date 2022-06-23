@@ -3,9 +3,20 @@ version: '3'
 services:
   alticci:
     build: .
+    container_name: flask
     volumes:
       - .:/usr/src/app
     ports:
       - "8080:8080"
     environment:
-      DEBUG: "true"
+      DEBUG: "True"
+      USE_REDIS: "True"
+      CACHE_DEFAULT_TIMEOUT: "60"
+      CACHE_REDIS_HOST: "0.0.0.0"
+      CACHE_REDIS_PORT: "6379"
+
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
