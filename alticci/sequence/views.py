@@ -1,23 +1,27 @@
-from flask import Blueprint, jsonify
+from flask import jsonify
+from flask.views import MethodView
 
-from alticci.cache import cache
+from alticci.app import cache
 from alticci.sequence.controllers import retrieve_alticci_sequence_term
+from alticci.sequence.schemas import AlticciSequenceResponseSchema
 
-blueprint = Blueprint("alticci", __name__, url_prefix="/alticci")
 
-@blueprint.route("/<int:term>", methods=["GET"])
-@cache.cached(timeout=60, query_string=True)
-def get_alticci_sequence_term(term):
-    """
-    """
+class AlticciSequenceTermView(MethodView):
+    @cache.cached(timeout=60, query_string=True)
+    def get(self, term):
+        """
+        """
 
-    value = retrieve_alticci_sequence_term(term)
+        value = retrieve_alticci_sequence_term(term)
 
-    response = {
-        "term": term,
-        "value": value,
-    }
+        schema = AlticciSequenceResponseSchema()
+        response = schema.dump(
+            {
+                "term": term,
+                "value": value,
+            }
+        )
 
-    status_code = 200
+        status_code = 200
 
-    return jsonify(response), status_code
+        return jsonify(response), status_code

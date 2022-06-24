@@ -1,4 +1,4 @@
-from alticci.cache import cache
+from alticci.app import cache
 
 @cache.memoize(timeout=60)
 def retrieve_alticci_sequence_term(term: int) -> int:
