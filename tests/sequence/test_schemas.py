@@ -1,11 +1,11 @@
 import pytest
 
-from alticci.sequence.schemas import AlticciSequenceResponseSchema
+from alticci.sequence.schemas import AlticciSequenceTermResponseSchema
 
 
 class TestAlticciSequenceResponseSchema:
     def test_schema(self):
-        schema = AlticciSequenceResponseSchema()
+        schema = AlticciSequenceTermResponseSchema()
         response = schema.dump(
             {
                 "term": 6,
@@ -14,7 +14,7 @@ class TestAlticciSequenceResponseSchema:
         )
 
     def test_schema_str_types_to_int(self):
-        schema = AlticciSequenceResponseSchema()
+        schema = AlticciSequenceTermResponseSchema()
         response = schema.dump(
             {
                 "term": "6",
@@ -23,7 +23,7 @@ class TestAlticciSequenceResponseSchema:
         )
 
     def test_schema_wrong_type(self):
-        schema = AlticciSequenceResponseSchema()
+        schema = AlticciSequenceTermResponseSchema()
 
         with pytest.raises(ValueError):
             response = schema.dump(

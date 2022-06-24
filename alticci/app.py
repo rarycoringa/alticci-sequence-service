@@ -1,9 +1,34 @@
 import os
 
 from flask import Flask
+from flask_restful import Api
 from flask_caching import Cache
+from flasgger import Swagger
 
+# Flask API configuration
 app = Flask(__name__)
+
+api = Api(app)
+
+app.config['JSON_SORT_KEYS'] = False
+app.config["SWAGGER"] = {
+    "title": "Alticci Sequence Service",
+    "uiversion": 3,
+}
+
+swagger_config = {
+    "headers": [],
+    "specs": [
+        {
+            "endpoint": "openapi",
+            "route": "/openapi.json",
+        },
+    ],
+    "static_url_path": "/flasgger_static",
+    "swagger_ui": True,
+    "specs_route": "/docs/",
+}
+swagger = Swagger(app, config=swagger_config)
 
 
 # Cache configuration
@@ -27,11 +52,19 @@ cache = Cache(config=config)
 cache.init_app(app)
 
 
-# Endpoints configuration
-from alticci.sequence.views import AlticciSequenceTermView
+# Resources configuration
+from alticci.sequence.views import (
+    AlticciSequenceTermView,
+    AlticciSequenceTermListView
+)
 
-app.add_url_rule(
+api.add_resource(
+    AlticciSequenceTermView,
     "/alticci/<int:term>",
-    view_func=AlticciSequenceTermView.as_view("sequence_term_view"),
-    methods=["GET"],
+    endpoint="sequence",
+)
+api.add_resource(
+    AlticciSequenceTermListView,
+    "/alticci/<int:first_term>/<int:last_term>",
+    endpoint="sequence_list",
 )

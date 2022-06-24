@@ -1,6 +1,6 @@
 from marshmallow import Schema, fields
 
 
-class AlticciSequenceResponseSchema(Schema):
-    term = fields.Int()
-    value = fields.Int()
+class AlticciSequenceTermResponseSchema(Schema):
+    term = fields.Int(required=True)
+    value = fields.Int(required=True)
