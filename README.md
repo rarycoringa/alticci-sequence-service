@@ -4,10 +4,10 @@
 
 Alticci Sequence is defined with these rules:
 
-$A_0=0
-$A_1=1
-$A_2=1
-$A_n=A_{n-3}+A_{n-2}
+$A_0=0$
+$A_1=1$
+$A_2=1$
+$A_n=A_{n-3}+A_{n-2}$
 
 ```
 n=0 => a(0) = 0
