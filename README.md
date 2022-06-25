@@ -1,20 +1,16 @@
 # Alticci Sequence Service
 
-🧮 A microservice responsible to calculate and return the a(n) term of an Alticci Sequence.
+🧮 A microservice responsible to calculate and return the **$A_n$** term of the **Alticci Sequence**.
 
-Alticci Sequence is defined with these rules:
+The Alticci Sequence ($A$) is defined following these rules:
 
 $A_0=0$
-$A_1=1$
-$A_2=1$
-$A_n=A_{n-3}+A_{n-2}$
 
-```
-n=0 => a(0) = 0
-n=1 => a(1) = 1
-n=2 => a(2) = 1
-n>2 => a(n) = a(n-3) + a(n-2)
-```
+$A_1=1$
+
+$A_2=1$
+
+$A_n=A_{n-3}+A_{n-2}$
 
 ## 1. About the application
 
