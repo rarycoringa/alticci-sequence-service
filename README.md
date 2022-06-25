@@ -1,6 +1,6 @@
 # Alticci Sequence Service
-![Python Tests CI](https://img.shields.io/github/workflow/status/rarycoringa/alticci-sequence-service/python-tests?label=tests&logo=pytest&logoColor=white)
-![Docker Image CI](https://img.shields.io/github/workflow/status/rarycoringa/alticci-sequence-service/docker-image?label=docker&logo=docker&logoColor=white)
+![Python Tests CI](https://img.shields.io/github/workflow/status/rarycoringa/alticci-sequence-service/Python%20Tests%20CI?label=tests&logo=pytest&logoColor=white)
+![Docker Image CI](https://img.shields.io/github/workflow/status/rarycoringa/alticci-sequence-service/Docker%20Image%20CI?label=docker&logo=docker&logoColor=white)
 
 ![Release](https://img.shields.io/github/v/release/rarycoringa/alticci-sequence-service)
 ![Tag](https://img.shields.io/github/v/tag/rarycoringa/alticci-sequence-service)
