@@ -1,31 +1,20 @@
 # Alticci Sequence Service
 
-🧮 A microservice responsible to calculate and return the **$A_n$** term of the **Alticci Sequence**.
+## 1. About the application
+
+A Rest API microservice to calculate and return the **$A_n$** term of the **Alticci Sequence**.
 
 The Alticci Sequence ($A_n$) is defined following these rules:
 
-$\[ A_n =$
-$\begin{cases}$
-$0  & \quad \text{if } n = 0}\\$
-$1  & \quad \text{if } n = 1}\\$
-$1  & \quad \text{if } n = 2}\\$
-$A_{n-3}+A_{n-2}  & \quad \text{if } n > 2$
-$\end{cases}$
-$\]$
-
-For $n<=2$:
-
-- $A_0=0$
-
-- $A_1=1$
-
-$A_2=1$
-
-For $n>2$:
-
-$A_n=A_{n-3}+A_{n-2}$
-
-## 1. About the application
+$$
+A_n =
+  \begin{cases}
+    0                  & \quad \text{if } n = 0\\
+    1                  & \quad \text{if } n = 1\\
+    1                  & \quad \text{if } n = 2\\
+    A_{n-3} + A_{n-2}  & \quad \text{if } n > 2
+  \end{cases}
+$$
 
 | Programming Language | Web Framework | Cache Technology |
 |-|-|-|
