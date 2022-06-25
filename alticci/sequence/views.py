@@ -1,4 +1,3 @@
-from flask import jsonify
 from flask_restful import Resource
 
 from alticci.app import cache
@@ -81,7 +80,7 @@ class AlticciSequenceTermListView(Resource):
                     value:
                         type: int
                         example: 9
-            list:
+            list[AlticciSequenceTermResponseSchema]:
                 type: list[AlticciSequenceTermResponseSchema]
                 example: [
                     {"term": 5, "value": 2},
@@ -92,7 +91,7 @@ class AlticciSequenceTermListView(Resource):
             200:
                 description: A list containing the requested terms requested and the calculated values.
                 schema:
-                    $ref: '#/definitions/list'
+                    $ref: '#/definitions/list[AlticciSequenceTermResponseSchema]'
         """
 
         try:
