@@ -2,7 +2,7 @@
 
 🧮 A microservice responsible to calculate and return the **$A_n$** term of the **Alticci Sequence**.
 
-The Alticci Sequence ($A$) is defined following these rules:
+The Alticci Sequence ($A_n$) is defined following these rules:
 
 $A_0=0$
 
