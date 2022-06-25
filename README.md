@@ -14,17 +14,13 @@ The Alticci Sequence ($A_n$) is defined following these rules:
 $$
 A_n =
   \begin{cases}
+    \nexists           & \quad \text{if } n < 0\\
     0                  & \quad \text{if } n = 0\\
     1                  & \quad \text{if } n = 1\\
     1                  & \quad \text{if } n = 2\\
     A_{n-3} + A_{n-2}  & \quad \text{if } n > 2
   \end{cases}
 $$
-
-| Programming Language | Web Framework | Cache Technology |
-|-|-|-|
-| **Python** 3.10 | **Flask** 2.1 | **Redis** 7 (using docker env) and **Flask Caching** (using pipenv local env) |  
-
 
 ## 2. Clone service from repository
 
