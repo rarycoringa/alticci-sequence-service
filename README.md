@@ -23,7 +23,7 @@
 
 This is a Rest API microservice which aims to calculate and return the **$A_n$** term of the **Alticci Sequence**.
 
-You can access the Rest API documentation and all your resources on this URL: http://alticci.rary.dev
+You can access the service here: http://alticci.rary.dev
 
 ### Alticci sequence definition
 
