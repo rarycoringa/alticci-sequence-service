@@ -5,11 +5,26 @@
 ![Tag](https://img.shields.io/github/v/tag/rarycoringa/alticci-sequence-service?include_prereleases)
 ![License](https://img.shields.io/github/license/rarycoringa/alticci-sequence-service)
 
-## 1. About the application
+## Table of Content
 
-A Rest API microservice to calculate and return the **$A_n$** term of the **Alticci Sequence**.
+- [About the application](#about-the-application)
+  - [Alticci sequence definition](#alticci-sequence-definition)
+  - [Technologies](#technologies)
+- [Clone the repository](#clone-the-repository)
+- [Run using docker and docker-compose](#run-using-docker-and-docker-compose)
+- [Run in development mode](#run-in-development-mode)
+  - [Environment settings](#environment-settings)
+  - [Run unit tests](#run-unit-tests)
+  - [Run server](#run-server)
 
-The Alticci Sequence ($A_n$) is defined following these rules:
+
+## About the application
+
+This is a Rest API microservice which aims to calculate and return the **$A_n$** term of the **Alticci Sequence**.
+
+### Alticci sequence definition
+
+The Alticci Sequence ($A_n$) is defined following these math rules:
 
 $$
 A_n =
@@ -22,9 +37,18 @@ A_n =
   \end{cases}
 $$
 
-## 2. Clone service from repository
+### Technologies
 
-The first step is clone the repository of the project available at the GitHub:
+This service is using these technologies:
+
+![Python Badge](https://img.shields.io/badge/Python-v3.10-lightgrey?style=flat&logo=python&logoColor=white&labelColor=gray)
+![Flask Badge](https://img.shields.io/badge/Flask-v2.1-lightgrey?style=flat&logo=flask&logoColor=white&labelColor=gray)
+![Redis Badge](https://img.shields.io/badge/Redis-v4.3-lightgrey?style=flat&logo=redis&logoColor=white&labelColor=gray)
+![Docker Badge](https://img.shields.io/badge/Docker-v20.10-lightgrey?style=flat&logo=docker&logoColor=white&labelColor=gray)
+
+## Clone the repository
+
+The first step is to clone the repository of the project available in the GitHub:
 
 ```bash
 $ git clone https://github.com/rarycoringa/alticci-sequence-service.git
@@ -36,7 +60,7 @@ After cloned, make sure you are accessing the project root directory using this 
 $ cd alticci-sequence-service
 ```
 
-## 3. Run service using docker
+## Run using docker and docker-compose
 
 If you just would like to use the service's resources, please make sure that Docker and docker-compose is installed and available on your local machine and then run this command on your bash:
 
@@ -50,11 +74,13 @@ The following endpoint will to provide a Swagger UI with all required documentat
 
 - **GET** `http://localhost:8080/`
 
-## 4. Run service using pipenv
+> You can use a browser to access http://localhost:8080/ and read the API documentation.
 
-### 4.1. Environment settings
+## Run in development mode
 
-The configuration endpoint is optional, since we have default values for the required configurations. But you can custom development settings with this following environment variables:
+### Environment settings
+
+The configuration endpoint is optional, since we have default values to the required configurations. But you can custom development settings with this following environment variables:
 
 ```bash
 DEBUG=True
@@ -65,7 +91,7 @@ CACHE_REDIS_PORT=6379
 
 ```
 
-### 4.2. Run unit tests
+### Run unit tests
 
 To run the unit tests and receive the report about the coverage is just to run this following command:
 
@@ -73,7 +99,7 @@ To run the unit tests and receive the report about the coverage is just to run t
 $ pipenv run tests
 ```
 
-### 4.3. Run server
+### Run server
 
 Ensuring that the tests was completed without issues, it's possible to run the server with development settings just with the following command:
 
