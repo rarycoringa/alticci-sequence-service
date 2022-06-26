@@ -110,3 +110,7 @@ Ensuring that the tests was completed without issues, it's possible to run the s
 ```bash
 $ pipenv run server
 ```
+
+---
+
+<center>alticci.rary.dev © 2022</center>
