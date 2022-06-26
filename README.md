@@ -23,7 +23,7 @@
 
 This is a Rest API microservice which aims to calculate and return the **$A_n$** term of the **Alticci Sequence**.
 
-You can access the service here: http://alticci.rary.dev
+You can access the service here: https://alticci-sequence-service.herokuapp.com
 
 ### Alticci sequence definition
 
@@ -72,13 +72,13 @@ If you just would like to use the service's resources, please make sure that Doc
 $ docker-compose up --build
 ```
 
-Presuming you don't have any resource running on the port `8080`, you are now able to use all the service's resources on your local machine.
+Presuming you don't have any resource running on the port `8000`, you are now able to use all the service's resources on your local machine.
 
 The following endpoint will to provide a Swagger UI with all required documentation about that resources:
 
 - **GET** `http://localhost:8000/`
 
-> You can use a browser to access http://localhost:8080/ and read the API documentation.
+> You can use a browser to access http://localhost:8000/ and read the API documentation.
 
 ## Run in development mode
 
@@ -111,6 +111,10 @@ Ensuring that the tests was completed without issues, it's possible to run the s
 $ pipenv run server
 ```
 
----
+Presuming you don't have any resource running on the port `8000`, you are now able to use all the service's resources on your local machine.
 
-<center>alticci.rary.dev © 2022</center>
+The following endpoint will to provide a Swagger UI with all required documentation about that resources:
+
+- **GET** `http://localhost:8000/`
+
+> You can use a browser to access http://localhost:8000/ and read the API documentation.
