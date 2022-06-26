@@ -1,4 +1,4 @@
-# Alticci Sequence Service
+# 🧮 Alticci Sequence Service
 ![Python Tests CI](https://img.shields.io/github/workflow/status/rarycoringa/alticci-sequence-service/Python%20Tests%20CI?label=tests&logo=pytest&logoColor=white)
 ![Docker Image CI](https://img.shields.io/github/workflow/status/rarycoringa/alticci-sequence-service/Docker%20Image%20CI?label=docker&logo=docker&logoColor=white)
 ![Heroku Deploy CD](https://img.shields.io/github/workflow/status/rarycoringa/alticci-sequence-service/Heroku%20Deploy%20CD?label=heroku&logo=heroku&logoColor=white)
@@ -23,6 +23,8 @@
 
 This is a Rest API microservice which aims to calculate and return the **$A_n$** term of the **Alticci Sequence**.
 
+You can access the Rest API documentation and all your resources on this URL: http://alticci.rary.dev
+
 ### Alticci sequence definition
 
 The Alticci Sequence ($A_n$) is defined following these math rules:
@@ -42,11 +44,11 @@ $$
 
 This service is using these technologies:
 
-![Python Badge](https://img.shields.io/badge/Python-v3.10-lightgrey?style=flat&logo=python&logoColor=white&labelColor=gray)
-![Flask Badge](https://img.shields.io/badge/Flask-v2.1-lightgrey?style=flat&logo=flask&logoColor=white&labelColor=gray)
-![Gunicorn Badge](https://img.shields.io/badge/Gunicorn-v20.1-lightgrey?style=flat&logo=gunicorn&logoColor=white&labelColor=gray)
-![Redis Badge](https://img.shields.io/badge/Redis-v4.3-lightgrey?style=flat&logo=redis&logoColor=white&labelColor=gray)
-![Docker Badge](https://img.shields.io/badge/Docker-v20.10-lightgrey?style=flat&logo=docker&logoColor=white&labelColor=gray)
+![Python version](https://img.shields.io/github/pipenv/locked/python-version/rarycoringa/alticci-sequence-service?color=lightgray&label=Python&logo=python&logoColor=white)
+![Flask version](https://img.shields.io/github/pipenv/locked/dependency-version/rarycoringa/alticci-sequence-service/flask?color=lightgray&label=Flask&logo=flask&logoColor=white)
+![Gunicorn version](https://img.shields.io/github/pipenv/locked/dependency-version/rarycoringa/alticci-sequence-service/gunicorn?color=lightgray&label=Gunicorn&logo=gunicorn&logoColor=white)
+![Redis version](https://img.shields.io/github/pipenv/locked/dependency-version/rarycoringa/alticci-sequence-service/redis?color=lightgray&label=Redis&logo=redis&logoColor=white)
+![Pytest version](https://img.shields.io/github/pipenv/locked/dependency-version/rarycoringa/alticci-sequence-service/dev/pytest?color=lightgray&label=Pytest&logo=pytest&logoColor=white)
 
 ## Clone the repository
 
