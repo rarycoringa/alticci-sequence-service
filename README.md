@@ -28,13 +28,13 @@ $$
 
 ## 2. Clone service from repository
 
-The first step is clone the repository of the project available at the GitHub. You need just to run this command on your bash:
+The first step is clone the repository of the project available at the GitHub:
 
 ```bash
 $ git clone https://github.com/rarycoringa/alticci-sequence-service.git
 ```
 
-After cloned, please access the project root directory using this command:
+After cloned, make sure you are accessing the project root directory using this command:
 
 ```bash
 $ cd alticci-sequence-service
@@ -48,38 +48,38 @@ If you just would like to use the service's resources, please make sure that Doc
 $ docker-compose up --build
 ```
 
-You are now able to use the service's resources on your local machine with a request that looks like this:
+Presuming you don't have any resource running on the port `8080`, you are now able to use all the service's resources on your local machine.
 
-- **GET** `http://127.0.0.1:8080/alticci/<term>`
+The following endpoint will to provide a Swagger UI with all required documentation about that resources:
 
-The `term` on the URL must be replaced by the integer term you want the value, like this example: `http://127.0.0.1:8080/alticci/10`.
+- **GET** `http://localhost:8080/`
 
-This endpoint will to return a status code `200 OK` and a json following these format:
+## 4. Run service using pipenv
 
-```json
-{
-  "term": 10,
-  "value": 9
-}
-```
+### 4.1. Environment settings
 
-... where `"term"` is the integer you passed on the URL and `"value"` is the calculated value of that passed term.
+The configuration endpoint is optional, since we have default values for the required configurations. But you can custom development settings with this following environment variables:
 
-## Run service using pipenv
-
-### Configure environment
+```bash
+DEBUG=True
+USE_REDIS=False
+CACHE_DEFAULT_TIMEOUT=60
+CACHE_REDIS_HOST=0.0.0.0
+CACHE_REDIS_PORT=6379
 
 ```
-[env vars]
-```
 
-### Run unit tests
+### 4.2. Run unit tests
+
+To run the unit tests and receive the report about the coverage is just to run this following command:
 
 ```bash
 $ pipenv run tests
 ```
 
-### Run server
+### 4.3. Run server
+
+Ensuring that the tests was completed without issues, it's possible to run the server with development settings just with the following command:
 
 ```bash
 $ pipenv run server
