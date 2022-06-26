@@ -3,11 +3,11 @@ version: '3'
 services:
   alticci:
     build: .
-    container_name: flask
+    container_name: alticci-service
     volumes:
       - .:/usr/src/app
     ports:
-      - "8080:8080"
+      - "8000:8000"
     environment:
       DEBUG: "True"
       USE_REDIS: "True"
@@ -17,6 +17,6 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: redis
+    container_name: alticci-redis
     ports:
       - "6379:6379"

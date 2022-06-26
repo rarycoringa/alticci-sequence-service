@@ -43,6 +43,7 @@ This service is using these technologies:
 
 ![Python Badge](https://img.shields.io/badge/Python-v3.10-lightgrey?style=flat&logo=python&logoColor=white&labelColor=gray)
 ![Flask Badge](https://img.shields.io/badge/Flask-v2.1-lightgrey?style=flat&logo=flask&logoColor=white&labelColor=gray)
+![Gunicorn Badge](https://img.shields.io/badge/Gunicorn-v20.1-lightgrey?style=flat&logo=gunicorn&logoColor=white&labelColor=gray)
 ![Redis Badge](https://img.shields.io/badge/Redis-v4.3-lightgrey?style=flat&logo=redis&logoColor=white&labelColor=gray)
 ![Docker Badge](https://img.shields.io/badge/Docker-v20.10-lightgrey?style=flat&logo=docker&logoColor=white&labelColor=gray)
 
@@ -72,7 +73,7 @@ Presuming you don't have any resource running on the port `8080`, you are now ab
 
 The following endpoint will to provide a Swagger UI with all required documentation about that resources:
 
-- **GET** `http://localhost:8080/`
+- **GET** `http://localhost:8000/`
 
 > You can use a browser to access http://localhost:8080/ and read the API documentation.
 

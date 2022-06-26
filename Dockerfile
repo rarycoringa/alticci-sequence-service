@@ -10,4 +10,4 @@ RUN pip install pipenv
 RUN pipenv install --deploy
 COPY . .
 
-CMD ["pipenv", "run", "server"]
+CMD ["pipenv", "run", "gunicorn", "-b", "0.0.0.0:8000", "main:app"]
