@@ -55,7 +55,7 @@ class AlticciSequenceTermListView(Resource):
     @cache.cached(timeout=60, query_string=True)
     def get(self, first_term: int, last_term: int):
         """
-        Returns the calculated value of the requested term.
+        Returns a list of the calculated values of the requested terms.
         ---
         tags:
             - Sequence
