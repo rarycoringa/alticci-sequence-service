@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-  alticci:
+  sequence:
     build: .
-    container_name: alticci-service
+    container_name: sequence-service
     volumes:
       - .:/usr/src/app
     ports:
@@ -17,6 +17,6 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: alticci-redis
+    container_name: sequence-redis
     ports:
       - "6379:6379"

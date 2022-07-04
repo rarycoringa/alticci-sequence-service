@@ -1,4 +1,4 @@
-from alticci.app import cache
+from sequence.app import cache
 
 
 @cache.memoize(timeout=60)

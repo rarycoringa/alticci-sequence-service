@@ -1,6 +1,6 @@
 import pytest
 
-from alticci.sequence.schemas import AlticciSequenceTermResponseSchema
+from sequence.alticci.schemas import AlticciSequenceTermResponseSchema
 
 
 class TestAlticciSequenceResponseSchema:

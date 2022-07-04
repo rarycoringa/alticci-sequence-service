@@ -12,7 +12,7 @@ api = Api(app)
 
 app.config['JSON_SORT_KEYS'] = False
 app.config["SWAGGER"] = {
-    "title": "Alticci Sequence Service",
+    "title": "Sequence Service",
     "uiversion": 3,
 }
 
@@ -53,7 +53,7 @@ cache.init_app(app)
 
 
 # Resources configuration
-from alticci.sequence.views import (
+from sequence.alticci.views import (
     AlticciSequenceTermView,
     AlticciSequenceTermListView
 )
@@ -61,10 +61,10 @@ from alticci.sequence.views import (
 api.add_resource(
     AlticciSequenceTermView,
     "/alticci/<int:term>",
-    endpoint="sequence",
+    endpoint="alticci_term",
 )
 api.add_resource(
     AlticciSequenceTermListView,
     "/alticci/<int:first_term>/<int:last_term>",
-    endpoint="sequence_list",
+    endpoint="alticci_list",
 )

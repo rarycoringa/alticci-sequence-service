@@ -1,8 +1,8 @@
 from flask_restful import Resource
 
-from alticci.app import cache
-from alticci.sequence.controllers import retrieve_alticci_sequence_term
-from alticci.sequence.schemas import AlticciSequenceTermResponseSchema
+from sequence.app import cache
+from sequence.alticci.controllers import retrieve_alticci_sequence_term
+from sequence.alticci.schemas import AlticciSequenceTermResponseSchema
 
 
 class AlticciSequenceTermView(Resource):
@@ -12,7 +12,7 @@ class AlticciSequenceTermView(Resource):
         Returns the calculated value of the requested term.
         ---
         tags:
-            - Sequence
+            - Alticci
         parameters:
           - name: term
             description: A non-negative integer.
@@ -58,7 +58,7 @@ class AlticciSequenceTermListView(Resource):
         Returns a list of the calculated values of the requested terms.
         ---
         tags:
-            - Sequence
+            - Alticci
         parameters:
           - name: first_term
             description: A non-negative integer less than or equal to "last_term".

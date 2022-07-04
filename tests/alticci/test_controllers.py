@@ -1,6 +1,6 @@
 import pytest
 
-from alticci.sequence.controllers import retrieve_alticci_sequence_term
+from sequence.alticci.controllers import retrieve_alticci_sequence_term
 
 
 class TestAlticciSequenceTermController:
