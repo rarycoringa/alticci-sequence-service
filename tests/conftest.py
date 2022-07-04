@@ -1,6 +1,6 @@
 import pytest
 
-from alticci.app import app
+from sequence.app import app
 
 
 @pytest.fixture()

@@ -1,6 +1,6 @@
 import os
 
-from alticci.app import app
+from sequence.app import app
 
 if __name__ == "__main__":
     debug = os.environ.get("DEBUG", "TRUE")
