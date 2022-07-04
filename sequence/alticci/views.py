@@ -12,7 +12,7 @@ class AlticciSequenceTermView(Resource):
         Returns the calculated value of the requested term.
         ---
         tags:
-            - Sequence
+            - Alticci
         parameters:
           - name: term
             description: A non-negative integer.
@@ -58,7 +58,7 @@ class AlticciSequenceTermListView(Resource):
         Returns a list of the calculated values of the requested terms.
         ---
         tags:
-            - Sequence
+            - Alticci
         parameters:
           - name: first_term
             description: A non-negative integer less than or equal to "last_term".
